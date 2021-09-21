@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react";
+import './App.scss';
+import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
+import NavBar from "./components/navbar/NavBar";
+import MainPage from "./components/main/MainPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+    render() {
+        return (
+            <div className="app">
+                <Router>
+                    <div className="app">
+                        <NavBar/>
+                        <Switch>
+                            <Route
+                                exact
+                                path="/"
+                                render={() => {
+                                    return (
+                                            <Redirect to="/main/" />
+                                    )
+                                }}
+                            />
+                            <Route path="/main/" exact component={MainPage}/>
+                            <Route path="localhost:3000" exact component={MainPage}/>
+                        {/*    /!*<Route path="/theory/" exact component={TheoryPage}/>*!/*/}
+                        {/*    /!*<Route path="/structure/" exact component={StructurePage}/>*!/*/}
+                        {/*    /!*<Route path="/simulator/" exact component={SimulatorPage}/>*!/*/}
+                        {/*    /!*<Route path="/about/" exact component={AboutPage}/>*!/*/}
+                        </Switch>
+                    </div>
+                </Router>
+            </div>
+        );
+    }
+};
 
 export default App;

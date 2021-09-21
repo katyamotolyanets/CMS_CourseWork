@@ -1,0 +1,33 @@
+$txt_color: #000000;
+$navbar_color: #AA9C74;
+
+.navbar{
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  max-width: 1490px;
+  max-height: 10%;
+  padding: 1.5%;
+  text-align: center;
+  margin: 0;
+  li {
+    list-style: none;
+    letter-spacing: 1.5px;
+    display: inline-flex;
+    padding: 1%;
+    align-items: center;
+    .link {
+      text-decoration: none;
+      color: $txt_color;
+    }
+    &:hover {
+      .link {
+        color: $navbar_color;
+      }
+    }
+  }
+}
+

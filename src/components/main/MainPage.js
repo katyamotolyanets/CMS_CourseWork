@@ -7,11 +7,13 @@ import reflection from "../../assets/reflection.png";
 import refraction from "../../assets/refraction.png";
 import full_reflection from "../../assets/full_reflection.png";
 import laboratory from "../../assets/Laboratory.png";
+import NavBar from "../navbar/NavBar";
 
 class MainPage extends Component {
     render() {
         return (
             <div className="main-page">
+                <NavBar/>
                 <div className="img-container">
                     <img src={laboratory} alt="Фото"/>
                     <p id="img-header">Определение показателя преломления жидкостей с помощью рефрактометра</p>

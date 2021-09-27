@@ -2,12 +2,14 @@ import {Link} from "react-router-dom";
 import React, {Component} from "react";
 import '../../App.scss';
 
-class NavBar extends Component {
-    state = {
-        background: "none",
-        color: "white"
+class NavBarClass extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            background: "none",
+            color: "white"
+        }
     }
-
     listenScrollEvent = e => {
         if (window.scrollY > 50) {
             this.setState({color: "black", background: "white"})
@@ -15,11 +17,9 @@ class NavBar extends Component {
             this.setState({color: "white", background: "none"})
         }
     }
-
     componentDidMount() {
         window.addEventListener('scroll', this.listenScrollEvent)
     }
-
     render() {
         return (
             <nav className="navbar" style={{background: this.state.background}}>
@@ -41,6 +41,6 @@ class NavBar extends Component {
             </nav>
         )
     }
-};
+}
 
-export default NavBar;
+export default NavBarClass;

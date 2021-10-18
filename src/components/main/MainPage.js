@@ -8,6 +8,7 @@ import refraction from "../../assets/refraction.png";
 import full_reflection from "../../assets/full_reflection.png";
 import laboratory from "../../assets/Laboratory.png";
 import NavBar from "../navbar/NavBar";
+import Block from "./Block";
 
 class MainPage extends Component {
     render() {
@@ -16,7 +17,7 @@ class MainPage extends Component {
                 <NavBar/>
                 <div className="img-container">
                     <img src={laboratory} alt="Фото"/>
-                    <p id="img-header">Определение показателя преломления жидкостей с помощью рефрактометра</p>
+                    <p id="img-header">Определение показателя преломления растворов с помощью рефрактометра</p>
                     <a className="more-info" href="#scroll">ПРОКРУТИТЕ ДЛЯ ИЗУЧЕНИЯ</a>
                 </div>
                 <ScrollableAnchor id={'scroll'}>
@@ -41,39 +42,12 @@ class MainPage extends Component {
                 </ScrollableAnchor>
                 <div className="second-container">
                     <div className="blocks">
-                        <div className="block">
-                            <div className="blocks-poster">
-                                <img src={reflection} className="poster-img" alt="Фото"></img>
-                            </div>
-                            <div className="blocks-header">
-                                <p>Закон отражения света</p>
-                            </div>
-                            <div className="blocks-read">
-                                <p><Link className="link" to={{pathname: `/theory/`}}>ЧИТАТЬ</Link></p>
-                            </div>
-                        </div>
-                        <div className="block">
-                            <div className="blocks-poster">
-                                <img src={refraction} className="poster-img" alt="Фото"></img>
-                            </div>
-                            <div className="blocks-header">
-                                <p>Закон преломления света</p>
-                            </div>
-                            <div className="blocks-read">
-                                <p><Link className="link" to={{pathname: `/theory/`}}>ЧИТАТЬ</Link></p>
-                            </div>
-                        </div>
-                        <div className="block">
-                            <div className="blocks-poster">
-                                <img src={full_reflection} className="poster-img" alt="Фото"></img>
-                            </div>
-                            <div className="blocks-header">
-                                <p>Явление полного отражения</p>
-                            </div>
-                            <div className="blocks-read">
-                                <p><Link className="link" to={{pathname: `/theory/`}}>ЧИТАТЬ</Link></p>
-                            </div>
-                        </div>
+                        <Block src={reflection}
+                               header="Закон отражения света"/>
+                        <Block src={refraction}
+                               header="Закон преломления света"/>
+                        <Block src={full_reflection}
+                               header="Явление полного отражения"/>
                     </div>
                     <div className="more-info">
                         <p><Link className="link" to={{pathname: `/theory/`}}>БОЛЬШЕ ИНФОРМАЦИИ</Link></p>

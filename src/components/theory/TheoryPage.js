@@ -7,7 +7,8 @@ import reflection from "../../assets/reflection.png";
 import refraction from "../../assets/refraction.png";
 import full_reflection from "../../assets/full_reflection.png";
 import formula from "../../assets/formula.png";
-
+import absolute_index from "../../assets/absolute_index.gif";
+import relative_index from "../../assets/relative_index.png";
 
 class TheoryPage extends Component {
     render() {
@@ -21,7 +22,7 @@ class TheoryPage extends Component {
                        isFancy={true}
                        first="Угол отражения β равен углу падения α: β = α."
                        second="Лучи падающий и отраженный находятся в одной плоскости с перпендикуляром,
-                             опущенным на поверхность раздела сред в точку падения."
+                               опущенным на поверхность раздела сред в точку падения."
                   />
                   <Law id="refraction"
                        header="Закон преломления света"
@@ -43,6 +44,23 @@ class TheoryPage extends Component {
                                отражения превосходит"
                        third="его самые большие значения для полированных поверхностей."
                   />
+                  <Law id="absolute_index"
+                       header="Абсолютный показатель преломления"
+                       img={absolute_index}
+                       isFancy={true}
+                       first="Абсолютный показатель преломления показывает, во сколько раз
+                              скорость с света в вакууме больше фазовой скорости υ света в среде."
+                       second="Значения показателя преломления характеризуют оптическую плотность среды."
+                  />
+                  <Law id="relative_index"
+                       header="Относительный показатель преломления"
+                       img={relative_index}
+                       isFancy={true}
+                       first="Относительный показатель преломления второй среды относительно первой n21 – физическая величина,
+                              показывающая, восколько раз "
+                       second="фазовая скорость υ1 распространения света в первой среде больше (или меньше),
+                               чем фазовая скорость υ2 распространения света во второй среде."
+                  />
                   <Law id="purpose"
                        header="Назначение рефрактометра"
                        first="В различных отраслях промышленности при проведении каких-либо исследований,
@@ -58,11 +76,15 @@ class TheoryPage extends Component {
                               эффект рефракции – искривление направления движения света. "
                        second="Рефрактометр измеряет концентрацию растворенных в жидкости веществ при помощи светового луча."
                   />
+
+
               </div>
               <div className="navigation">
                   <p><a href="#reflection">Закон отражения света</a></p>
                   <p><a href="#refraction">Закон преломление света</a></p>
                   <p><a href="#full_reflection">Явление полного отражения</a></p>
+                  <p><a href="#absolute_index">Абсолютный показатель преломления</a></p>
+                  <p><a href="#relative_index">Относительный показатель преломления</a></p>
                   <p><a href="#purpose">Назначение рефрактометра</a></p>
                   <p><a href="#principle">Принцип функционирования</a></p>
               </div>

@@ -49,7 +49,7 @@ class MainPage extends Component {
                                 <p>Закон отражения света</p>
                             </div>
                             <div className="blocks-read">
-                                <p><Link className="link">ЧИТАТЬ</Link></p>
+                                <p><Link className="link" to={{pathname: `/theory/`}}>ЧИТАТЬ</Link></p>
                             </div>
                         </div>
                         <div className="block">
@@ -60,7 +60,7 @@ class MainPage extends Component {
                                 <p>Закон преломления света</p>
                             </div>
                             <div className="blocks-read">
-                                <p><Link className="link">ЧИТАТЬ</Link></p>
+                                <p><Link className="link" to={{pathname: `/theory/`}}>ЧИТАТЬ</Link></p>
                             </div>
                         </div>
                         <div className="block">
@@ -71,7 +71,7 @@ class MainPage extends Component {
                                 <p>Явление полного отражения</p>
                             </div>
                             <div className="blocks-read">
-                                <p><Link className="link">ЧИТАТЬ</Link></p>
+                                <p><Link className="link" to={{pathname: `/theory/`}}>ЧИТАТЬ</Link></p>
                             </div>
                         </div>
                     </div>

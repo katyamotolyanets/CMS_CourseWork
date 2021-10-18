@@ -8,8 +8,22 @@
 @import "scss_files/MainPage";
 @import "scss_files/TheoryPage";
 @import "scss_files/StructurePage";
+@import "scss_files/AboutPage";
 
-@media (prefers-reduced-motion: no-preference) {
+@media (max-width: 1200px) {
+  .page {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .page {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .page {
+    max-width: none;
+  }
 }
 
 @keyframes App-logo-spin {

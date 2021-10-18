@@ -7,13 +7,14 @@ $navbar_color: #AA9C74;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 20;
   width: 100%;
   max-width: 1490px;
   max-height: 10%;
   padding: 1.5%;
   text-align: center;
   margin: 0;
+  font-size: calc(2px + (14 + 14 * 0.7) * ((100vw - 320px) / 1490));
   li {
     list-style: none;
     letter-spacing: 1.5px;

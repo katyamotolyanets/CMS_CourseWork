@@ -1,24 +1,35 @@
 import React, {Component} from "react";
 import '../../App.scss';
+import ReactFancyBox from 'react-fancybox';
+import 'react-fancybox/lib/fancybox.css';
 import SubNavBar from "../navbar/subNavBar/SubNavBar";
+import Law from "./Law";
 import reflection from "../../assets/reflection.png";
 import refraction from "../../assets/refraction.png";
 import full_reflection from "../../assets/full_reflection.png";
 import formula from "../../assets/formula.png";
 
+
 class TheoryPage extends Component {
     render() {
-      return (
+        return (
           <div className="theory-page">
             <SubNavBar/>
               <div className="laws">
-                  <div className="law">
+                  <Law id="reflection"
+                       header="Закон отражения света"
+                       img={reflection}
+                       info="Угол отражения β равен углу падения α: β = α. Лучи падающий и отраженный находятся в одной плоскости с перпендикуляром,
+                                  опущенным на поверхность раздела сред в точку падения."/>
+                  <div className="law" id="reflection">
                       <div className="header">
                           <p>Закон отражения света</p>
                       </div>
                       <div className="description">
                           <div className="poster-img">
-                              <img src={reflection} alt="Фото"/>
+                              <ReactFancyBox showCloseBtn={false}
+                                image={reflection}>
+                              </ReactFancyBox>
                           </div>
                           <div className="info">
                               <p>Угол отражения β равен углу падения α: β = α.</p>
@@ -27,18 +38,20 @@ class TheoryPage extends Component {
                           </div>
                       </div>
                   </div>
-                  <div className="law">
+                  <div className="law" id="refraction">
                       <div className="header">
                           <p>Закон преломления света</p>
                       </div>
                       <div className="description">
                           <div className="poster-img">
-                              <img src={refraction} alt="Фото"/>
+                              <ReactFancyBox showCloseBtn={false}
+                                             image={refraction}>
+                              </ReactFancyBox>
                           </div>
                           <div className="info">
                               <p>Луч падающий α, луч преломленный β и перпендикуляр,
                                   проведенный к границе раздела в точке падения луча, лежат в одной плоскости.</p>
-                              <a href="#" className="formula">Отношение синуса угла падения к синусу угла преломления
+                              <a className="formula">Отношение синуса угла падения к синусу угла преломления
                                   есть величина постоянная для данных сред.</a>
                               <div className="formula-div">
                                   <img src={formula} alt="Формула"/>
@@ -46,13 +59,15 @@ class TheoryPage extends Component {
                           </div>
                       </div>
                   </div>
-                  <div className="law">
+                  <div className="law" id="full_reflection">
                       <div className="header">
                           <p>Явление полного отражения</p>
                       </div>
                       <div className="description">
                           <div className="poster-img">
-                              <img src={full_reflection} alt="Фото"/>
+                              <ReactFancyBox image={full_reflection}
+                                             showCloseBtn={false}>
+                              </ReactFancyBox>
                           </div>
                           <div className="info">
                               <p>Полное внутреннее отражение — внутреннее отражение, при условии,
@@ -62,7 +77,7 @@ class TheoryPage extends Component {
                           </div>
                       </div>
                   </div>
-                  <div className="law">
+                  <div className="law" id="purpose">
                       <div className="header">
                           <p>Назначение рефрактометра</p>
                       </div>
@@ -75,7 +90,7 @@ class TheoryPage extends Component {
                           </div>
                       </div>
                   </div>
-                  <div className="law">
+                  <div className="law" id="principle">
                       <div className="header">
                           <p>Принцип функционирования рефрактометра</p>
                       </div>
@@ -91,13 +106,16 @@ class TheoryPage extends Component {
                   </div>
               </div>
               <div className="navigation">
-                <table>
-
-                </table>
+                  <p><a href="#reflection">Закон отражения света</a></p>
+                  <p><a href="#refraction">Закон преломление света</a></p>
+                  <p><a href="#full_reflection">Явление полного отражения</a></p>
+                  <p><a href="#purpose">Назначение рефрактометра</a></p>
+                  <p><a href="#principle">Принцип функционирования</a></p>
               </div>
           </div>
       ) ;
     }
 }
+
 
 export default TheoryPage;

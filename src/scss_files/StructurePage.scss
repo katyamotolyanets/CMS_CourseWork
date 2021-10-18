@@ -1,6 +1,20 @@
 $accent_color: #AA9C74;
 $arrow_color: #D0D0D0;
-
+@media (max-width: 1200px) {
+  .structure-page {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .structure-page {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .structure-page {
+    max-width: none;
+  }
+}
 .structure-page {
   .container {
     position: relative;
@@ -43,7 +57,7 @@ $arrow_color: #D0D0D0;
         cursor: pointer;
         user-select: none;
         position: absolute;
-        top: 45%;
+        top: 25%;
         right: 250px;
         color: $arrow_color;
       }
@@ -54,10 +68,106 @@ $arrow_color: #D0D0D0;
         cursor: pointer;
         user-select: none;
         position: absolute;
-        top: 45%;
+        top: 25%;
         left: 250px;
         color: $arrow_color;
+      }
+    }
+  }
+  h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    padding: 25px 0;
+    font-weight: bold;
 
+  }
+  .map-block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    .map-info {
+      padding-top: 120px;
+      padding-left: 40px;
+      font-size: 22px;
+      line-height: 30px;
+      letter-spacing: 1px;
+      ol {
+        list-style-type: decimal;
+        text-align: left;
+      }
+    }
+    .map {
+      position: relative;
+      top: 0;
+      left: 0;
+      img {
+        width: 380px;
+        height: 600px;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .btn {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border: 1.5px solid white;
+        border-radius: 50%;
+        color: white;
+        font-size: 22px;
+      }
+      #b1 {
+        top: 23%;
+        left: 42%;
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+      }
+      #b2 {
+        top: 48%;
+        left: 6%;
+      }
+      #b3 {
+        top: 42%;
+        left: 20%;
+      }
+      #b4 {
+        top: 4%;
+        left: 27%;
+      }
+      #b5 {
+        top: 65%;
+        left: 74%;
+      }
+      #b6 {
+        top: 49%;
+        left: 59%;
+      }
+      #b6 {
+        top: 49%;
+        left: 59%;
+      }
+      #b7 {
+        top: 60%;
+        left: 61%;
+      }
+      #b8 {
+        top: 57%;
+        left: 53%;
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+      }
+      #b9 {
+        top: 45%;
+        left: 69%;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+      }
+      #b5, #b6, #b7 {
+        width: 45px;
+        height: 45px;
       }
     }
   }

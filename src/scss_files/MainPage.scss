@@ -42,14 +42,16 @@ $light_acc_color: #f1e9da;
       width: 100%;
       height: 100%;
       filter: blur(2px);
+      object-fit: cover;
+      display: block;
     }
     #img-header {
+      font-size: calc(34px + (16 + 16 * 0.7) * ((100vw - 320px) / 1200));
       position: absolute;
       text-align: center;
-      top: 40%;
+      top: 35%;
       left: 0;
       color: $txt_white;
-      font-size: 3.5rem;
       text-transform: uppercase;
       padding: 0 25px;
       letter-spacing: 2px;
@@ -58,9 +60,9 @@ $light_acc_color: #f1e9da;
       position: absolute;
       text-align: center;
       top: 90%;
-      left: 40%;
+      left: 37%;
       color: $txt_white;
-      font-size: 18px;
+      font-size: calc(7px + (10 + 10 * 0.7) * ((100vw - 320px) / 1200));
       letter-spacing: 2px;
       display: flex;
       flex-direction: column;
@@ -94,7 +96,7 @@ $light_acc_color: #f1e9da;
       left: 0;
     }
     #header {
-      font-size: 35px;
+      font-size: calc(21px + (14 + 14 * 0.7) * ((100vw - 320px) / 1200));
       font-weight: bold;
       text-align: center;
       letter-spacing: 3px;
@@ -134,7 +136,7 @@ $light_acc_color: #f1e9da;
         #read_more {
           display: flex;
           flex-direction: row;
-          font-size: 15px;
+          font-size: calc(7px + (8 + 8 * 0.7) * ((100vw - 320px) / 1200));
           margin-top: 25px;
           letter-spacing: 2px;
           text-decoration: none;
@@ -149,7 +151,6 @@ $light_acc_color: #f1e9da;
             height: 12.6px;
             margin: 3.5px 0 0 7px;
           }
-
           a {
             color: $accent_color;
             text-decoration: none;
@@ -211,7 +212,7 @@ $light_acc_color: #f1e9da;
         .blocks-header {
           text-align: center;
           font-weight: bold;
-          font-size: 25px;
+          font-size: calc(13px + (12 + 12 * 0.7) * ((100vw - 320px) / 1200));
           letter-spacing: 1px;
           padding: 30px 5px 15px 5px;
         }
@@ -219,7 +220,7 @@ $light_acc_color: #f1e9da;
           display: flex;
           flex-direction: row;
           padding: 15px 5px 20px 15px;
-          font-size: 15px;
+          font-size: calc(7px + (8 + 8 * 0.7) * ((100vw - 320px) / 1200));
           letter-spacing: 2px;
           .link {
             color: $accent_color;
@@ -243,7 +244,7 @@ $light_acc_color: #f1e9da;
       align-items: center;
       text-align: center;
       letter-spacing: 2px;
-      font-size: 18px;
+      font-size: calc(8px + (10 + 10 * 0.7) * ((100vw - 320px) / 1200));
       margin-bottom: 60px;
       .link {
         color: $accent_color;
